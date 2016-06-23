@@ -13,8 +13,8 @@ class Nave
     @vida = vida
     @masa = masa
 
-  	@colisiones = {
-  		Nave => Efecto_Destructivo.new(100),
+    @colisiones = {
+  	  Nave => Efecto_Destructivo.new(100),
       Misil => Efecto_Destructivo.new(80)
   	}
 
@@ -22,8 +22,8 @@ class Nave
 
   def colisionar_con(objeto_espacial)
 
-  	colision = Colision.new(self, objeto_espacial)
-  	colision.aplicar_efectos
+    colision = Colision.new(self, objeto_espacial)
+    colision.aplicar_efectos
 
   end
 
