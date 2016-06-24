@@ -22,18 +22,18 @@ describe 'Integracion_De_Colisiones' do
   end
 
   it 'Se verifica que la colision Nave-Misil se lleve a cabo de manera correcta' do
-  	nave = Nave.new(100,100)
-  	misil = Misil.new(200,200)
+    nave = Nave.new(100,100)
+    misil = Misil.new(200,200)
 
-  	nave.colisionar_con(misil)
+    nave.colisionar_con(misil)
 
-  	#Vida & Masa de la nave
-  	expect(nave.vida).to eq 20
-  	expect(nave.masa).to eq 100
+    #Vida & Masa de la nave
+    expect(nave.vida).to eq 20
+    expect(nave.masa).to eq 100
 
-  	#Vida & Masa del misil
-  	expect(misil.vida).to eq 100
-  	expect(misil.masa).to eq 200
+    #Vida & Masa de la bomba
+    expect(misil.vida).to eq 100
+    expect(misil.masa).to eq 200
   end
 
   it 'Se verifica que la colision Nave-Bomba se lleve a cabo de manera correcta' do
