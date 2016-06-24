@@ -3,6 +3,7 @@ require_relative '../model/Efecto_Destructivo_Porcentual'
 
 require_relative '../model/Colision'
 require_relative '../model/Nave'
+require_relative '../model/Misil'
 
 class Bomba
   
@@ -17,7 +18,8 @@ class Bomba
 
     @colisiones = {
   	  Nave => Efecto_Destructivo.new(100),
-      Misil => Efecto_Destructivo_Porcentual.new(0.5)
+      Misil => Efecto_Destructivo_Porcentual.new(0.5),
+      Bomba => Efecto_Destructivo.new(100)
   	}
 
   end
