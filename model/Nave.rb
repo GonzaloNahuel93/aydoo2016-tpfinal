@@ -6,6 +6,7 @@ require_relative '../model/Colision'
 require_relative '../model/Misil'
 require_relative '../model/Bomba'
 require_relative '../model/Asteroide'
+require_relative '../model/Estrella'
 
 class Nave
 
