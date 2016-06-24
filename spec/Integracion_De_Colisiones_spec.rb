@@ -187,4 +187,19 @@ describe 'Integracion_De_Colisiones' do
     expect(misil.masa).to eq 100
   end
 
+  it 'Se verifica que la colision Bomba-Bomba se lleve a cabo de manera correcta' do
+    primera_bomba = Bomba.new(150,150)
+    segunda_bomba = Bomba.new(150,150)
+
+    primera_bomba.colisionar_con(segunda_bomba)
+
+    #Vida & Masa de la primera_bomba
+    expect(primera_bomba.vida).to eq 50
+    expect(primera_bomba.masa).to eq 150
+
+    #Vida & Masa de la segunda_bomba
+    expect(segunda_bomba.vida).to eq 50
+    expect(segunda_bomba.masa).to eq 150
+  end
+
 end
