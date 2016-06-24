@@ -103,11 +103,11 @@ describe 'Integracion_De_Colisiones' do
 
     primer_misil.colisionar_con(segundo_misil)
 
-    #Vida & Masa del misil
+    #Vida & Masa del primer_misil
     expect(primer_misil.vida).to eq 100
     expect(primer_misil.masa).to eq 200
 
-    #Vida & Masa de la nave
+    #Vida & Masa del segundo_misil
     expect(segundo_misil.vida).to eq 100
     expect(segundo_misil.masa).to eq 200
   end
