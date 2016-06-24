@@ -3,6 +3,8 @@ require_relative '../model/Efecto_Masa'
 
 require_relative '../model/Colision'
 require_relative '../model/Nave'
+require_relative '../model/Misil'
+require_relative '../model/Bomba'
 
 class Asteroide
   
@@ -17,7 +19,8 @@ class Asteroide
 
     @colisiones = {
   	  Nave => Efecto_Masa.new(0.1,-0.5),
-      Misil => Efecto_Nulo.new
+      Misil => Efecto_Nulo.new,
+      Bomba => Efecto_Nulo.new
   	}
 
   end
