@@ -31,7 +31,7 @@ describe 'Integracion_De_Colisiones' do
     expect(nave.vida).to eq 20
     expect(nave.masa).to eq 100
 
-    #Vida & Masa de la bomba
+    #Vida & Masa del misil
     expect(misil.vida).to eq 100
     expect(misil.masa).to eq 200
   end
