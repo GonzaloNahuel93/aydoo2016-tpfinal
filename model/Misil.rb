@@ -1,3 +1,4 @@
+require_relative '../model/Efecto_Nulo'
 require_relative '../model/Efecto_Destructivo'
 require_relative '../model/Colision'
 require_relative '../model/Nave'
@@ -15,7 +16,8 @@ class Misil
 
     @colisiones = {
   	  Nave => Efecto_Destructivo.new(100),
-      Misil => Efecto_Destructivo.new(100)
+      Misil => Efecto_Destructivo.new(100),
+      Bomba => Efecto_Nulo.new
   	}
 
   end
