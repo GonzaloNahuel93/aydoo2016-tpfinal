@@ -17,7 +17,8 @@ class Misil
     @colisiones = {
   	  Nave => Efecto_Destructivo.new(100),
       Misil => Efecto_Destructivo.new(100),
-      Bomba => Efecto_Nulo.new
+      Bomba => Efecto_Nulo.new,
+      Asteroide => Efecto_Nulo.new
   	}
 
   end
