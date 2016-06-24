@@ -1,5 +1,6 @@
 require_relative '../model/Efecto_Nulo'
 require_relative '../model/Efecto_Masa'
+
 require_relative '../model/Colision'
 require_relative '../model/Nave'
 

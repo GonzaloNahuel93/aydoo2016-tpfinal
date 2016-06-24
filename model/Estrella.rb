@@ -1,4 +1,5 @@
 require_relative '../model/Efecto_Destructivo_Porcentual'
+
 require_relative '../model/Colision'
 require_relative '../model/Nave'
 
