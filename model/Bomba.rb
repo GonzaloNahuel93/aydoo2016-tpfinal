@@ -1,9 +1,9 @@
 require_relative '../model/Efecto_Destructivo'
 require_relative '../model/Colision'
-require_relative '../model/Misil'
+require_relative '../model/Nave'
 
-class Nave
-
+class Bomba
+  
   attr_accessor :vida, :masa
   @vida
   @masa
@@ -14,9 +14,7 @@ class Nave
     @masa = masa
 
     @colisiones = {
-  	  Nave => Efecto_Destructivo.new(100),
-      Misil => Efecto_Destructivo.new(80),
-      Bomba => Efecto_Destructivo.new(50)
+  	  Nave => Efecto_Destructivo.new(100)
   	}
 
   end
