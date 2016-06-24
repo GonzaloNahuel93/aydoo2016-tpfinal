@@ -7,7 +7,10 @@ class Efecto_Masa
 
   end
 
-  def aplicar(objeto_colisionador, objeto_colisionado)
+  def aplicar(colisionadores)
+
+    objeto_colisionador = colisionadores[0]
+    objeto_colisionado = colisionadores[1]
   	
   	#La masa del colisionador se sustituira primero, y el dato original de su masa se perdera. Por eso se guarda previamente.
   	auxiliar_masa_colisionador = objeto_colisionador.masa

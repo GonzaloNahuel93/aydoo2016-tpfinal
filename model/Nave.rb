@@ -1,5 +1,7 @@
 require_relative '../model/Efecto_Destructivo'
+require_relative '../model/Efecto_Constructivo'
 require_relative '../model/Efecto_Masa'
+
 require_relative '../model/Colision'
 require_relative '../model/Misil'
 require_relative '../model/Bomba'
@@ -20,7 +22,8 @@ class Nave
   	  Nave => Efecto_Destructivo.new(100),
       Misil => Efecto_Destructivo.new(80),
       Bomba => Efecto_Destructivo.new(50),
-      Asteroide => Efecto_Masa.new(-0.5,0.1)
+      Asteroide => Efecto_Masa.new(-0.5,0.1),
+      Estrella => Efecto_Constructivo.new
   	}
 
   end

@@ -3,6 +3,7 @@ require_relative '../model/Nave'
 require_relative '../model/Misil'
 require_relative '../model/Bomba'
 require_relative '../model/Asteroide'
+require_relative '../model/Estrella'
 
 describe 'Integracion_De_Colisiones' do
 
@@ -64,6 +65,21 @@ describe 'Integracion_De_Colisiones' do
     #Vida & Masa del asteroide
     expect(asteroide.vida).to eq 100
     expect(asteroide.masa).to eq 110
+  end
+
+  it 'Se verifica que la colision Nave-Estrella se lleve a cabo de manera correcta' do
+    nave = Nave.new(100,100)
+    estrella = Estrella.new(100,100)
+
+    nave.colisionar_con(estrella)
+
+    #Vida & Masa de la nave
+    expect(nave.vida).to eq 200
+    expect(nave.masa).to eq 100
+
+    #Vida & Masa de la estrella
+    expect(estrella.vida).to eq 0
+    expect(estrella.masa).to eq 100
   end
 
 end
