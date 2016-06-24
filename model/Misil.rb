@@ -14,7 +14,8 @@ class Misil
     @masa = masa
 
     @colisiones = {
-  	  Nave => Efecto_Destructivo.new(100)
+  	  Nave => Efecto_Destructivo.new(100),
+      Misil => Efecto_Destructivo.new(100)
   	}
 
   end
