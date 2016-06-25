@@ -23,7 +23,7 @@ class Nave
   	  Nave => Efecto_Destructivo.new(100),
       Misil => Efecto_Destructivo.new(80),
       Bomba => Efecto_Destructivo.new(50),
-      Asteroide => Efecto_Masa.new(-0.5,0.1),
+      Asteroide => Efecto_Masa.new(-0.5),
       Estrella => Efecto_Constructivo.new
   	}
 
