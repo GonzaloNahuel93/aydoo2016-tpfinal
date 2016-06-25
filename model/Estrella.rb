@@ -5,6 +5,7 @@ require_relative '../model/Colision'
 require_relative '../model/Nave'
 require_relative '../model/Misil'
 require_relative '../model/Bomba'
+require_relative '../model/Asteroide'
 
 class Estrella
   
