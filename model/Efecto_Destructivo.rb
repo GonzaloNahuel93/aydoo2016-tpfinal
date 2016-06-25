@@ -5,7 +5,10 @@ class Efecto_Destructivo
   end
 
   def aplicar(primer_objeto_espacial, segundo_objeto_espacial)
+
   	primer_objeto_espacial.vida -= @vida_a_bajar
+  	primer_objeto_espacial.actualizar_datos
+
   end
 
 end

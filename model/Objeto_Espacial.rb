@@ -15,4 +15,22 @@ class Objeto_Espacial
     @colisiones[objeto_espacial.class]
   end
 
+  def actualizar_datos
+    
+    if(@vida < 0)
+
+      @vida = 0
+      @esta_vivo = false
+
+    end
+
+    if(@masa < 0)
+
+      @masa = 0
+      @esta_vivo = false
+
+    end
+
+  end
+
 end

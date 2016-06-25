@@ -13,6 +13,7 @@ class Misil < Objeto_Espacial
 
     @vida = vida
     @masa = masa
+    @esta_vivo = true
 
     @colisiones = {
   	  Nave => Efecto_Destructivo.new(100),

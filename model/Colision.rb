@@ -11,7 +11,7 @@ class Colision
 
     colisionadores = [@objeto_colisionador, @objeto_colisionado]
 
-    #Se clona al colisionador ya que puede necesitarse su estado previo para aplicar el efecto al objeto colisionado.
+    #Se clona al objeto colisionador ya que puede necesitarse su estado previo para aplicar el efecto al objeto colisionado.
     colisionador_clonado = @objeto_colisionador.clone
     #
 

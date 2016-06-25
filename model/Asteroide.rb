@@ -13,6 +13,7 @@ class Asteroide < Objeto_Espacial
 
     @vida = vida
     @masa = masa
+    @esta_vivo = true
 
     @colisiones = {
   	  Nave => Efecto_Masa.new(0.1),
