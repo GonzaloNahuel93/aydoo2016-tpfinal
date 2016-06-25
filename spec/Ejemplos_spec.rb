@@ -55,4 +55,20 @@ describe 'Ejemplos' do
     expect(segunda_bomba.masa).to eq 45
   end
 
+  it 'Colision Bomba-Asteroide: Se verifica que se efectuen correctamente los cambios luego de la colision' do
+    bomba = Bomba.new(200,100)
+    asteroide = Asteroide.new(30,100)
+
+    #Una bomba (vida=200, masa=100) colisiona con un asteroide (vida=30, masa=100)
+    bomba.colisionar_con(asteroide)
+
+    #bomba: Efecto Destructivo 100% => bomba (vida=0, masa=100)
+    expect(bomba.vida).to eq 0
+    expect(bomba.masa).to eq 100
+
+    #asteroide: Efecto Nulo => asteroide (vida=30, masa=100)
+    expect(asteroide.vida).to eq 30
+    expect(asteroide.masa).to eq 100
+  end
+
 end
