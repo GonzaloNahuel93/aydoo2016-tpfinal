@@ -20,7 +20,8 @@ class Estrella
     @colisiones = {
   	  Nave => Efecto_Destructivo_Porcentual.new(1.0),
       Misil => Efecto_Nulo.new,
-      Bomba => Efecto_Destructivo_Porcentual.new(1.0)
+      Bomba => Efecto_Destructivo_Porcentual.new(1.0),
+      Asteroide => Efecto_Destructivo_Porcentual.new(1.0)
   	}
 
   end
