@@ -23,20 +23,20 @@ describe 'Ejemplos' do
     expect(asteroide.masa).to eq 110
   end
 
-#  it 'Colision Estrella-Misil: Se verifica que se efectuen correctamente los cambios luego de la colision' do
-#    estrella = Estrella.new(50,10)
-#    misil = Misil.new(10,30)
+  it 'Colision Estrella-Misil: Se verifica que se efectuen correctamente los cambios luego de la colision' do
+    estrella = Estrella.new(50,10)
+    misil = Misil.new(10,30)
 
     #Una estrella (vida=50, masa=10) colisiona con un misil (vida=10, masa=30)
-#    estrella.colisionar_con(misil)
+    estrella.colisionar_con(misil)
 
     #estrella: Efecto Nulo => estrella (vida=50, masa=10)
-#    expect(estrella.vida).to eq 50
-#    expect(estrella.masa).to eq 10
+    expect(estrella.vida).to eq 50
+    expect(estrella.masa).to eq 10
 
     #misil: Efecto Nulo => misil (vida=10, masa=30)
-#    expect(misil.vida).to eq 10
-#    expect(misil.masa).to eq 30
-#  end
+    expect(misil.vida).to eq 10
+    expect(misil.masa).to eq 30
+  end
 
 end
