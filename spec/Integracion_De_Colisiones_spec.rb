@@ -367,4 +367,19 @@ describe 'Integracion_De_Colisiones' do
     expect(asteroide.masa).to eq 500
   end
 
+  it 'Se verifica que la colision Estrella-Estrella se lleve a cabo de manera correcta' do
+    primera_estrella = Estrella.new(50000,50000)
+    segunda_estrella = Estrella.new(60000,60000)
+
+    primera_estrella.colisionar_con(segunda_estrella)
+
+    #Vida & Masa de la primera_estrella
+    expect(primera_estrella.vida).to eq 0
+    expect(primera_estrella.masa).to eq 50000
+
+    #Vida & Masa de la segunda_estrella
+    expect(segunda_estrella.vida).to eq 0
+    expect(segunda_estrella.masa).to eq 60000
+  end
+
 end
