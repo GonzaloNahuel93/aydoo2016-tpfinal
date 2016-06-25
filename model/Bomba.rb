@@ -16,12 +16,12 @@ class Bomba < Objeto_Espacial
     @esta_vivo = true
 
     @colisiones = {
-  	  Nave => Efecto_Destructivo.new(100),
+      Nave => Efecto_Destructivo.new(100),
       Misil => Efecto_Destructivo_Porcentual.new(0.5),
       Bomba => Efecto_Destructivo.new(100),
       Asteroide => Efecto_Destructivo_Porcentual.new(1.0),
       Estrella => Efecto_Destructivo.new(100)
-  	}
+    }
 
   end
 
