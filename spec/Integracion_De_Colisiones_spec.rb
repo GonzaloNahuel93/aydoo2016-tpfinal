@@ -337,4 +337,19 @@ describe 'Integracion_De_Colisiones' do
     expect(misil.masa).to eq 50
   end
 
+  it 'Se verifica que la colision Estrella-Bomba se lleve a cabo de manera correcta' do
+    estrella = Estrella.new(500,500)
+    bomba = Bomba.new(250,250)
+
+    estrella.colisionar_con(bomba)
+
+    #Vida & Masa de la estrella
+    expect(estrella.vida).to eq 0
+    expect(estrella.masa).to eq 500
+
+    #Vida & Masa de la bomba
+    expect(bomba.vida).to eq 150
+    expect(bomba.masa).to eq 250
+  end
+
 end
