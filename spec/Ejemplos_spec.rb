@@ -71,4 +71,20 @@ describe 'Ejemplos' do
     expect(asteroide.masa).to eq 100
   end
 
+  it 'Colision Nave-Estrella: Se verifica que se efectuen correctamente los cambios luego de la colision' do
+    nave = Nave.new(100,100)
+    estrella = Estrella.new(50,50)
+
+    #Una nave (vida=100, masa=100) colisiona con una estrella (vida=50, masa=50)
+    nave.colisionar_con(estrella)
+
+    #nave: Efecto Constructivo en una cantidad de unidades igual a la del otro objeto => nave (vida=150, masa=100)
+    expect(nave.vida).to eq 150
+    expect(nave.masa).to eq 100
+
+    #estrella: Efecto Destructivo 100% => estrella (vida=0, masa=50)
+    expect(estrella.vida).to eq 0
+    expect(estrella.masa).to eq 50
+  end
+
 end
