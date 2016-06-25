@@ -4,11 +4,8 @@ class Efecto_Destructivo
     @vida_a_bajar = vida_a_bajar 	
   end
 
-  def aplicar(colisionadores)
-
-  	objeto_colisionador = colisionadores[0]
-  	objeto_colisionador.vida -= @vida_a_bajar
-
+  def aplicar(primer_objeto_espacial, segundo_objeto_espacial)
+  	primer_objeto_espacial.vida -= @vida_a_bajar
   end
 
 end

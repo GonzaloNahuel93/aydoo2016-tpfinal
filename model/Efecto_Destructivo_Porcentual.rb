@@ -4,11 +4,8 @@ class Efecto_Destructivo_Porcentual
     @porcentaje_a_bajar = porcentaje_a_bajar 	
   end
 
-  def aplicar(colisionadores)
-
-  	objeto_colisionador = colisionadores[0]
-  	objeto_colisionador.vida -= objeto_colisionador.vida * @porcentaje_a_bajar
-
+  def aplicar(primer_objeto_espacial, segundo_objeto_espacial)
+  	primer_objeto_espacial.vida -= (primer_objeto_espacial.vida * @porcentaje_a_bajar)
   end
 
 end
