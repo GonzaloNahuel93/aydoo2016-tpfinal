@@ -307,4 +307,19 @@ describe 'Integracion_De_Colisiones' do
     expect(estrella.masa).to eq 10000
   end
 
+  it 'Se verifica que la colision Estrella-Nave se lleve a cabo de manera correcta' do
+    estrella = Estrella.new(10000,10000)
+    nave = Nave.new(500,500)
+
+    estrella.colisionar_con(nave)
+
+    #Vida & Masa de la estrella
+    expect(estrella.vida).to eq 0
+    expect(estrella.masa).to eq 10000
+
+    #Vida & Masa de la nave
+    expect(nave.vida).to eq 10500
+    expect(nave.masa).to eq 500
+  end
+
 end
