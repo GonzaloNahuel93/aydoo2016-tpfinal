@@ -1,8 +1,10 @@
 class Colision
 
   def initialize(objeto_colisionador, objeto_colisionado)
+
     @objeto_colisionador = objeto_colisionador
-    @objeto_colisionado = objeto_colisionado	
+    @objeto_colisionado = objeto_colisionado
+
   end
 
   def aplicar_efectos
