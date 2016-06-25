@@ -20,7 +20,8 @@ class Asteroide
     @colisiones = {
   	  Nave => Efecto_Masa.new(0.1,-0.5),
       Misil => Efecto_Nulo.new,
-      Bomba => Efecto_Nulo.new
+      Bomba => Efecto_Nulo.new,
+      Asteroide => Efecto_Nulo.new
   	}
 
   end
