@@ -55,17 +55,17 @@ describe 'Integracion_De_Colisiones' do
 
   it 'Se verifica que la colision Nave-Asteroide se lleve a cabo de manera correcta' do
     nave = Nave.new(100,100)
-    asteroide = Asteroide.new(100,100)
+    asteroide = Asteroide.new(300,300)
 
     nave.colisionar_con(asteroide)
 
     #Vida & Masa de la nave
     expect(nave.vida).to eq 100
-    expect(nave.masa).to eq 50
+    expect(nave.masa).to eq 0
 
     #Vida & Masa del asteroide
-    expect(asteroide.vida).to eq 100
-    expect(asteroide.masa).to eq 110
+    expect(asteroide.vida).to eq 300
+    expect(asteroide.masa).to eq 310
   end
 
   it 'Se verifica que la colision Nave-Estrella se lleve a cabo de manera correcta' do

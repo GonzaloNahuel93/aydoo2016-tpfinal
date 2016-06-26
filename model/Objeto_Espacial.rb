@@ -17,14 +17,14 @@ class Objeto_Espacial
 
   def actualizar_datos
     
-    if(@vida < 0)
+    if(@vida <= 0)
 
       @vida = 0
       @esta_vivo = false
 
     end
 
-    if(@masa < 0)
+    if(@masa <= 0)
 
       @masa = 0
       @esta_vivo = false
