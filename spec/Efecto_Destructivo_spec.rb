@@ -48,4 +48,14 @@ describe 'Efecto_Destructivo' do
     expect(asteroide.vida).to eq 60
   end
 
+  it 'Se verifica que un Efecto Destructivo altere correctamente la vida de una Estrella' do
+    efecto_destructivo = Efecto_Destructivo.new(180)
+    estrella = Estrella.new(185,200)
+
+    efecto_destructivo.aplicar(estrella, nil)
+
+    #Vida actualizada de la estrella
+    expect(estrella.vida).to eq 5
+  end
+
 end
