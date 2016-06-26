@@ -41,4 +41,15 @@ describe 'Efecto_Nulo' do
     expect(bomba.masa).to eq 300
   end
 
+  it 'Se verifica que un Efecto Nulo no altere el estado de un Asteroide' do
+    efecto_nulo = Efecto_Nulo.new
+    asteroide = Asteroide.new(400,400)
+
+    efecto_nulo.aplicar(asteroide, nil)
+
+    #Estado actualizado del asteroide
+    expect(asteroide.vida).to eq 400
+    expect(asteroide.masa).to eq 400
+  end
+
 end
