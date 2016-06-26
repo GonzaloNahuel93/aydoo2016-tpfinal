@@ -18,7 +18,7 @@ describe 'Nave' do
 
     nave = Nave.new(200,100)
 
-    #La vida de la nave deben ser 200
+    #La vida de la nave debe ser 200
     expect(nave.vida).to eq 200
 
   end
@@ -27,7 +27,7 @@ describe 'Nave' do
 
     nave = Nave.new(200,300)
 
-    #La masa de la nave deben ser 300
+    #La masa de la nave debe ser 300
     expect(nave.masa).to eq 300
 
   end
@@ -36,7 +36,7 @@ describe 'Nave' do
 
     nave = Nave.new(-100,100)
 
-    #La vida de la nave deben ser 0
+    #La vida de la nave debe ser 0
     expect(nave.vida).to eq 0
 
   end
@@ -45,7 +45,7 @@ describe 'Nave' do
 
     nave = Nave.new(100,-100)
 
-    #La masa de la nave deben ser 0
+    #La masa de la nave debe ser 0
     expect(nave.masa).to eq 0
 
   end
