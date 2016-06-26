@@ -9,9 +9,9 @@ require_relative '../model/Asteroide'
 
 class Estrella < Objeto_Espacial
 
-  def initialize(vida, masa)
+  def initialize(*parametros)
 
-    super(vida, masa)
+    super(*parametros)
 
     @colisiones = {
       Nave => Efecto_Destructivo_Porcentual.new(1.0),

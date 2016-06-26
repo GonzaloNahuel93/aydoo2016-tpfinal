@@ -2,11 +2,22 @@ class Objeto_Espacial
 
   attr_accessor :vida, :masa
 
-  def initialize(vida, masa)
+  def initialize(*parametros)
 
-    @vida = vida
-    @masa = masa
-    @esta_vivo = true
+    if(parametros.length == 2)
+
+      @vida = parametros[0]
+      @masa = parametros[1]
+      @esta_vivo = true
+      self.actualizar_estado
+
+    else
+
+      @vida = 100
+      @masa = 100
+      @esta_vivo = true
+
+    end
 
   end
 
