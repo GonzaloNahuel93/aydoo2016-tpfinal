@@ -34,7 +34,7 @@ describe 'Asteroide' do
 
   it 'Se verifica que se inicialice un Asteroide con la vida en 0 (Cero) cuando se inserta un numero negativo para la vida' do
 
-    asteroide = Asteroide.new(-100,100)
+    asteroide = Asteroide.new(-400,400)
 
     #La vida del Asteroide debe ser 0
     expect(asteroide.vida).to eq 0
@@ -43,7 +43,7 @@ describe 'Asteroide' do
 
   it 'Se verifica que se inicialice un Asteroide con la masa en 0 (Cero) cuando se inserta un numero negativo para la masa' do
 
-    asteroide = Asteroide.new(100,-100)
+    asteroide = Asteroide.new(400,-400)
 
     #La masa del asteroide debe ser 0
     expect(asteroide.masa).to eq 0
