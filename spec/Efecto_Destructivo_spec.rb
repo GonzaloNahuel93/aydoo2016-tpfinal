@@ -28,4 +28,14 @@ describe 'Efecto_Destructivo' do
     expect(misil.vida).to eq 90
   end
 
+  it 'Se verifica que un Efecto Destructivo altere correctamente la vida de una Bomba' do
+    efecto_destructivo = Efecto_Destructivo.new(550)
+    bomba = Bomba.new(1000,1000)
+
+    efecto_destructivo.aplicar(bomba, nil)
+
+    #Vida actualizada de la bomba
+    expect(bomba.vida).to eq 450
+  end
+
 end
