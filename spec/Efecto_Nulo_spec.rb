@@ -30,4 +30,15 @@ describe 'Efecto_Nulo' do
     expect(misil.masa).to eq 200
   end
 
+  it 'Se verifica que un Efecto Nulo no altere el estado de una Bomba' do
+    efecto_nulo = Efecto_Nulo.new
+    bomba = Bomba.new(300,300)
+
+    efecto_nulo.aplicar(bomba, nil)
+
+    #Estado actualizado de la bomba
+    expect(bomba.vida).to eq 300
+    expect(bomba.masa).to eq 300
+  end
+
 end
