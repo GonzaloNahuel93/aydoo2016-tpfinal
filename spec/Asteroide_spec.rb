@@ -41,13 +41,13 @@ describe 'Asteroide' do
 
   end
 
-#  it 'Se verifica que se inicialice un Asteroide con la masa en 0 (Cero) cuando se inserta un numero negativo para la masa' do
+  it 'Se verifica que se inicialice un Asteroide con la masa en 0 (Cero) cuando se inserta un numero negativo para la masa' do
 
-#    asteroide = Asteroide.new(100,-100)
+    asteroide = Asteroide.new(100,-100)
 
     #La masa del asteroide debe ser 0
-#    expect(asteroide.masa).to eq 0
+    expect(asteroide.masa).to eq 0
 
-#  end
+  end
 
 end
