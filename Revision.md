@@ -39,5 +39,7 @@ Respuesta: ACEPTADO. Se ha cambiado el nombre de ese método por 'actualizar_est
 
 * Observación 08: considero innecesaria la creación de objetos que no tienen comportamiento o estado alguno, como la clase 'EfectoNulo', ya que aunque pertenezca al dominio no hace ni hará nada jamás (de otra forma no se debería denominar 'EfectoNulo'). Sugiero eliminarla y reemplazarla por algún estado ya existente configurado para que no provoque cambio alguno.
 
+Respuesta: RECHAZADO. Si bien es verdad que el Efecto Nulo no hace nada, y hasta admito que me siento incómodo teniendo una clase que no cambia el estado de ninguna clase, hace que mi código sea legible en cuanto a que efecto debe sufrir un objeto espacial cuando colisiona con otro. Además, como bien se dijo, el Efecto Nulo pertenece al dominio del problema, lo cual me siento obligado de cierta forma a que ese efecto esté entre las clases a modelar.
+
 ----------------------------------------------------------------------
 
