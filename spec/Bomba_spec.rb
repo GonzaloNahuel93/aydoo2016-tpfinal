@@ -14,14 +14,14 @@ describe 'Bomba' do
 
   end
 
-#  it 'Se verifica que se inicialice una Bomba con la vida indicada' do
+  it 'Se verifica que se inicialice una Bomba con la vida indicada' do
 
-#    bomba = Bomba.new(300,200)
+    bomba = Bomba.new(10,50)
 
-    #La vida de la bomba debe ser 300
-#    expect(bomba.vida).to eq 300
+    #La vida de la bomba debe ser 10
+    expect(bomba.vida).to eq 10
 
-#  end
+  end
 
 #  it 'Se verifica que se inicialice una Bomba con la masa indicada' do
 
