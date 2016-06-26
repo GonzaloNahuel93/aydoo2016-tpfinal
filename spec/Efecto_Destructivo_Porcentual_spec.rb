@@ -49,4 +49,14 @@ describe 'Efecto_Destructivo_Porcentual' do
     expect(asteroide.vida).to eq 1125
   end
 
+  it 'Se verifica que un Efecto Destructivo Porcentual altere correctamente la vida de una Estrella' do
+    efecto_destructivo_porcentual = Efecto_Destructivo_Porcentual.new(0.9)
+    estrella = Estrella.new(10,10)
+
+    efecto_destructivo_porcentual.aplicar(estrella, nil)
+
+    #Vida actualizada de la estrella
+    expect(estrella.vida).to eq 1
+  end
+
 end
