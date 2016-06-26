@@ -17,7 +17,7 @@ describe 'Efecto_Masa' do
     #La nave debe incrementar su masa en un valor igual al 50% de la masa de la estrella
     efecto_masa.aplicar(nave, estrella)
 
-    #Vida actualizada de la nave
+    #Masa actualizada de la nave
     expect(nave.masa).to eq 200
   end
 
@@ -29,7 +29,7 @@ describe 'Efecto_Masa' do
     #El misil debe disminuir su masa en un valor igual al 50% de la masa del asteroide
     efecto_masa.aplicar(misil, asteroide)
 
-    #Vida actualizada del misil
+    #Masa actualizada del misil
     expect(misil.masa).to eq 450
   end
 
@@ -41,7 +41,7 @@ describe 'Efecto_Masa' do
     #La bomba debe incrementar su masa en un valor igual al 10% de la masa de la nave
     efecto_masa.aplicar(bomba, nave)
 
-    #Vida actualizada de la bomba
+    #Masa actualizada de la bomba
     expect(bomba.masa).to eq 1100
   end
 
@@ -53,8 +53,20 @@ describe 'Efecto_Masa' do
     #El asteroide debe disminuir su masa en un valor igual al 90% de la masa del misil
     efecto_masa.aplicar(asteroide, misil)
 
-    #Vida actualizada del asteroide
+    #Masa actualizada del asteroide
     expect(asteroide.masa).to eq 0
+  end
+
+  it 'Se verifica que un Efecto Masa altere correctamente la masa de una Estrella en base a una Bomba' do
+    efecto_masa = Efecto_Masa.new(0.6)
+    estrella = Estrella.new(1000,1000)
+    bomba = Bomba.new(100,100)
+
+    #La estrella debe incrementar su masa en un valor igual al 60% de la masa de la bomba
+    efecto_masa.aplicar(estrella, bomba)
+
+    #Masa actualizada de la estrella
+    expect(estrella.masa).to eq 1060
   end
 
 end
