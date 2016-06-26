@@ -1,16 +1,16 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/Efecto_Destructivo'
+require_relative '../model/EfectoDestructivo'
 require_relative '../model/Nave'
 require_relative '../model/Misil'
 require_relative '../model/Bomba'
 require_relative '../model/Asteroide'
 require_relative '../model/Estrella'
 
-describe 'Efecto_Destructivo' do
+describe 'EfectoDestructivo' do
 
   it 'Se verifica que un Efecto Destructivo altere correctamente la vida de una Nave' do
-    efecto_destructivo = Efecto_Destructivo.new(200)
+    efecto_destructivo = EfectoDestructivo.new(200)
     nave = Nave.new(100,100)
 
     efecto_destructivo.aplicar(nave, nil)
@@ -20,7 +20,7 @@ describe 'Efecto_Destructivo' do
   end
 
   it 'Se verifica que un Efecto Destructivo altere correctamente la vida de un Misil' do
-    efecto_destructivo = Efecto_Destructivo.new(10)
+    efecto_destructivo = EfectoDestructivo.new(10)
     misil = Misil.new(100,100)
 
     efecto_destructivo.aplicar(misil, nil)
@@ -30,7 +30,7 @@ describe 'Efecto_Destructivo' do
   end
 
   it 'Se verifica que un Efecto Destructivo altere correctamente la vida de una Bomba' do
-    efecto_destructivo = Efecto_Destructivo.new(550)
+    efecto_destructivo = EfectoDestructivo.new(550)
     bomba = Bomba.new(1000,1000)
 
     efecto_destructivo.aplicar(bomba, nil)
@@ -40,7 +40,7 @@ describe 'Efecto_Destructivo' do
   end
 
   it 'Se verifica que un Efecto Destructivo altere correctamente la vida de un Asteroide' do
-    efecto_destructivo = Efecto_Destructivo.new(340)
+    efecto_destructivo = EfectoDestructivo.new(340)
     asteroide = Asteroide.new(400,400)
 
     efecto_destructivo.aplicar(asteroide, nil)
@@ -50,7 +50,7 @@ describe 'Efecto_Destructivo' do
   end
 
   it 'Se verifica que un Efecto Destructivo altere correctamente la vida de una Estrella' do
-    efecto_destructivo = Efecto_Destructivo.new(180)
+    efecto_destructivo = EfectoDestructivo.new(180)
     estrella = Estrella.new(185,200)
 
     efecto_destructivo.aplicar(estrella, nil)

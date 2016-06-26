@@ -1,16 +1,16 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/Efecto_Constructivo'
+require_relative '../model/EfectoConstructivo'
 require_relative '../model/Nave'
 require_relative '../model/Misil'
 require_relative '../model/Bomba'
 require_relative '../model/Asteroide'
 require_relative '../model/Estrella'
 
-describe 'Efecto_Constructivo' do
+describe 'EfectoConstructivo' do
 
   it 'Se verifica que un Efecto Constructivo altere correctamente la vida de una Nave en base a otra Nave' do
-    efecto_constructivo = Efecto_Constructivo.new
+    efecto_constructivo = EfectoConstructivo.new
     primera_nave = Nave.new(100,100)
     segunda_nave = Nave.new(200,200)
 
@@ -22,7 +22,7 @@ describe 'Efecto_Constructivo' do
   end
 
   it 'Se verifica que un Efecto Constructivo altere correctamente la vida de un Misil en base a una Estrella' do
-    efecto_constructivo = Efecto_Constructivo.new
+    efecto_constructivo = EfectoConstructivo.new
     misil = Misil.new(1000,1000)
     estrella = Estrella.new(1,100)
 
@@ -34,7 +34,7 @@ describe 'Efecto_Constructivo' do
   end
 
   it 'Se verifica que un Efecto Constructivo altere correctamente la vida de una Bomba en base a un Asteroide' do
-    efecto_constructivo = Efecto_Constructivo.new
+    efecto_constructivo = EfectoConstructivo.new
     bomba = Bomba.new(15,15)
     asteroide = Asteroide.new(15,500)
 
@@ -46,7 +46,7 @@ describe 'Efecto_Constructivo' do
   end
 
   it 'Se verifica que un Efecto Constructivo altere correctamente la vida de un Asteroide en base a un Misil' do
-    efecto_constructivo = Efecto_Constructivo.new
+    efecto_constructivo = EfectoConstructivo.new
     asteroide = Asteroide.new(44,100)
     misil = Misil.new(6,100)
 
@@ -58,7 +58,7 @@ describe 'Efecto_Constructivo' do
   end
 
   it 'Se verifica que un Efecto Constructivo no altere la vida de una Estrella en base a otra Estrella que tiene 0 de vida' do
-    efecto_constructivo = Efecto_Constructivo.new
+    efecto_constructivo = EfectoConstructivo.new
     primera_estrella = Estrella.new(500,500)
     segunda_estrella = Estrella.new(0,100)
 

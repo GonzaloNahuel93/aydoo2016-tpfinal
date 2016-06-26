@@ -1,4 +1,4 @@
-class Objeto_Espacial
+class ObjetoEspacial
 
   attr_accessor :vida, :masa
 

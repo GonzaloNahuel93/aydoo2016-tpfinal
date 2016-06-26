@@ -1,4 +1,4 @@
-class Efecto_Destructivo_Porcentual
+class EfectoDestructivoPorcentual
 
   def initialize(porcentaje_a_bajar)
     @porcentaje_a_bajar = porcentaje_a_bajar 	

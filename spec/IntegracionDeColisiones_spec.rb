@@ -6,7 +6,7 @@ require_relative '../model/Bomba'
 require_relative '../model/Asteroide'
 require_relative '../model/Estrella'
 
-describe 'Integracion_De_Colisiones' do
+describe 'IntegracionDeColisiones' do
 
   it 'Se verifica que la colision Nave-Nave se lleve a cabo de manera correcta' do
     primera_nave = Nave.new(200,200)

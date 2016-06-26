@@ -1,16 +1,16 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/Efecto_Masa'
+require_relative '../model/EfectoMasa'
 require_relative '../model/Nave'
 require_relative '../model/Misil'
 require_relative '../model/Bomba'
 require_relative '../model/Asteroide'
 require_relative '../model/Estrella'
 
-describe 'Efecto_Masa' do
+describe 'EfectoMasa' do
 
   it 'Se verifica que un Efecto Masa altere correctamente la masa de una Nave en base a una Estrella' do
-    efecto_masa = Efecto_Masa.new(0.5)
+    efecto_masa = EfectoMasa.new(0.5)
     nave = Nave.new(100,100)
     estrella = Estrella.new(200,200)
 
@@ -22,7 +22,7 @@ describe 'Efecto_Masa' do
   end
 
   it 'Se verifica que un Efecto Masa altere correctamente la masa de un Misil en base a un Asteroide' do
-    efecto_masa = Efecto_Masa.new(-0.5)
+    efecto_masa = EfectoMasa.new(-0.5)
     misil = Misil.new(500,500)
     asteroide = Asteroide.new(100,100)
 
@@ -34,7 +34,7 @@ describe 'Efecto_Masa' do
   end
 
   it 'Se verifica que un Efecto Masa altere correctamente la masa de una Bomba en base a una Nave' do
-    efecto_masa = Efecto_Masa.new(0.1)
+    efecto_masa = EfectoMasa.new(0.1)
     bomba = Bomba.new(1000,1000)
     nave = Nave.new(1000,1000)
 
@@ -46,7 +46,7 @@ describe 'Efecto_Masa' do
   end
 
   it 'Se verifica que un Efecto Masa altere correctamente la masa de un Asteroide en base a un Misil' do
-    efecto_masa = Efecto_Masa.new(-0.9)
+    efecto_masa = EfectoMasa.new(-0.9)
     asteroide = Asteroide.new(100,100)
     misil = Misil.new(1000,1000)
 
@@ -58,7 +58,7 @@ describe 'Efecto_Masa' do
   end
 
   it 'Se verifica que un Efecto Masa altere correctamente la masa de una Estrella en base a una Bomba' do
-    efecto_masa = Efecto_Masa.new(0.6)
+    efecto_masa = EfectoMasa.new(0.6)
     estrella = Estrella.new(1000,1000)
     bomba = Bomba.new(100,100)
 

@@ -1,4 +1,4 @@
-class Efecto_Constructivo
+class EfectoConstructivo
 
   def aplicar(primer_objeto_espacial, segundo_objeto_espacial)
 

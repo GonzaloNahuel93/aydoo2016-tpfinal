@@ -1,4 +1,4 @@
-class Efecto_Destructivo
+class EfectoDestructivo
 
   def initialize(vida_a_bajar)
     @vida_a_bajar = vida_a_bajar 	

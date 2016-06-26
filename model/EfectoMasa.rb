@@ -1,4 +1,4 @@
-class Efecto_Masa
+class EfectoMasa
 
   def initialize(porcentaje)
     @porcentaje = porcentaje

@@ -1,24 +1,24 @@
-require_relative '../model/Objeto_Espacial'
-require_relative '../model/Efecto_Nulo'
-require_relative '../model/Efecto_Destructivo_Porcentual'
+require_relative '../model/ObjetoEspacial'
+require_relative '../model/EfectoNulo'
+require_relative '../model/EfectoDestructivoPorcentual'
 require_relative '../model/Colision'
 require_relative '../model/Nave'
 require_relative '../model/Misil'
 require_relative '../model/Bomba'
 require_relative '../model/Asteroide'
 
-class Estrella < Objeto_Espacial
+class Estrella < ObjetoEspacial
 
   def initialize(*parametros)
 
     super(*parametros)
 
     @colisiones = {
-      Nave => Efecto_Destructivo_Porcentual.new(1.0),
-      Misil => Efecto_Nulo.new,
-      Bomba => Efecto_Destructivo_Porcentual.new(1.0),
-      Asteroide => Efecto_Destructivo_Porcentual.new(1.0),
-      Estrella => Efecto_Destructivo_Porcentual.new(1.0)
+      Nave => EfectoDestructivoPorcentual.new(1.0),
+      Misil => EfectoNulo.new,
+      Bomba => EfectoDestructivoPorcentual.new(1.0),
+      Asteroide => EfectoDestructivoPorcentual.new(1.0),
+      Estrella => EfectoDestructivoPorcentual.new(1.0)
     }
 
   end

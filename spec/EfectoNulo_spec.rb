@@ -1,16 +1,16 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/Efecto_Nulo'
+require_relative '../model/EfectoNulo'
 require_relative '../model/Nave'
 require_relative '../model/Misil'
 require_relative '../model/Bomba'
 require_relative '../model/Asteroide'
 require_relative '../model/Estrella'
 
-describe 'Efecto_Nulo' do
+describe 'EfectoNulo' do
 
   it 'Se verifica que un Efecto Nulo no altere el estado de una Nave' do
-    efecto_nulo = Efecto_Nulo.new
+    efecto_nulo = EfectoNulo.new
     nave = Nave.new(100,100)
 
     efecto_nulo.aplicar(nave, nil)
@@ -21,7 +21,7 @@ describe 'Efecto_Nulo' do
   end
 
   it 'Se verifica que un Efecto Nulo no altere el estado de un Misil' do
-    efecto_nulo = Efecto_Nulo.new
+    efecto_nulo = EfectoNulo.new
     misil = Misil.new(200,200)
 
     efecto_nulo.aplicar(misil, nil)
@@ -32,7 +32,7 @@ describe 'Efecto_Nulo' do
   end
 
   it 'Se verifica que un Efecto Nulo no altere el estado de una Bomba' do
-    efecto_nulo = Efecto_Nulo.new
+    efecto_nulo = EfectoNulo.new
     bomba = Bomba.new(300,300)
 
     efecto_nulo.aplicar(bomba, nil)
@@ -43,7 +43,7 @@ describe 'Efecto_Nulo' do
   end
 
   it 'Se verifica que un Efecto Nulo no altere el estado de un Asteroide' do
-    efecto_nulo = Efecto_Nulo.new
+    efecto_nulo = EfectoNulo.new
     asteroide = Asteroide.new(400,400)
 
     efecto_nulo.aplicar(asteroide, nil)
@@ -54,7 +54,7 @@ describe 'Efecto_Nulo' do
   end
 
   it 'Se verifica que un Efecto Nulo no altere el estado de una Estrella' do
-    efecto_nulo = Efecto_Nulo.new
+    efecto_nulo = EfectoNulo.new
     estrella = Estrella.new(500,500)
 
     efecto_nulo.aplicar(estrella, nil)
