@@ -52,4 +52,15 @@ describe 'Efecto_Nulo' do
     expect(asteroide.masa).to eq 400
   end
 
+  it 'Se verifica que un Efecto Nulo no altere el estado de una Estrella' do
+    efecto_nulo = Efecto_Nulo.new
+    estrella = Estrella.new(500,500)
+
+    efecto_nulo.aplicar(estrella, nil)
+
+    #Estado actualizado de la estrella
+    expect(estrella.vida).to eq 500
+    expect(estrella.masa).to eq 500
+  end
+
 end
