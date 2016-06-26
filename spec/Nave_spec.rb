@@ -32,4 +32,13 @@ describe 'Nave' do
 
   end
 
+  it 'Se verifica que se inicialice una Nave con la vida 0 (Cero) cuando se inserta un numero negativo para la vida' do
+
+    nave = Nave.new(-100,100)
+
+    #La vida de la nave deben ser 0
+    expect(nave.vida).to eq 0
+
+  end
+
 end
