@@ -15,6 +15,8 @@ Respuesta: RECHAZADO. Para mi es importante que la clase 'Colision' almacene y c
 
 * Observación 03: en la clase 'ObjetoEspacial' se define un attribute accessor para los atributos 'masa' y 'vida', y debajo se definen esos atributos individualmente. Se considera mala práctica en Ruby, por ser redundante, representar a los atributos individualmente al mismo tiempo que se define un attribute accessor, por lo que recomiendo removerlos dejando únicamente el attribute accessor de los mismos.
 
+Respuesta: ACEPTADO. No me había dado cuenta de ese detalle. Buena observación. Esos atributos definidos de manera redundante fueron removidos, y simplemente quedó el attribute accessor.
+
 ----------------------------------------------------------------------
 
 * Observación 04: el nombre del método 'actualizar_datos' de la clase 'ObjetoEspacial' no indica claramente cuál es su responsabilidad. Sugiero cambiarlo por un nombre más descriptivo para mejorar la claridad del código.

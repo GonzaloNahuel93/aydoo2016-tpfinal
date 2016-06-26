@@ -1,8 +1,6 @@
 class Objeto_Espacial
 
   attr_accessor :vida, :masa
-  @vida
-  @masa
 
   def colisionar_con(objeto_espacial)
 
