@@ -21,4 +21,16 @@ describe 'Efecto_Masa' do
     expect(nave.masa).to eq 200
   end
 
+  it 'Se verifica que un Efecto Masa altere correctamente la masa de un Misil en base a un Asteroide' do
+    efecto_masa = Efecto_Masa.new(-0.5)
+    misil = Misil.new(500,500)
+    asteroide = Asteroide.new(100,100)
+
+    #El misil debe disminuir su masa en un valor igual al 50% de la masa del asteroide
+    efecto_masa.aplicar(misil, asteroide)
+
+    #Vida actualizada del misil
+    expect(misil.masa).to eq 450
+  end
+
 end
