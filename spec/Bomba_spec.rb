@@ -23,14 +23,14 @@ describe 'Bomba' do
 
   end
 
-#  it 'Se verifica que se inicialice una Bomba con la masa indicada' do
+  it 'Se verifica que se inicialice una Bomba con la masa indicada' do
 
-#    bomba = Bomba.new(500,400)
+    bomba = Bomba.new(250,500)
 
-    #La masa de la bomba debe ser 400
-#    expect(bomba.masa).to eq 400
+    #La masa de la bomba debe ser 500
+    expect(bomba.masa).to eq 500
 
-#  end
+  end
 
 #  it 'Se verifica que se inicialice una Bomba con la vida en 0 (Cero) cuando se inserta un numero negativo para la vida' do
 
