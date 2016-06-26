@@ -16,10 +16,19 @@ describe 'Nave' do
 
   it 'Se verifica que se inicialice una Nave con la vida indicada' do
 
-    nave = Nave.new(200,200)
+    nave = Nave.new(200,100)
 
     #La vida de la nave deben ser 200
     expect(nave.vida).to eq 200
+
+  end
+
+  it 'Se verifica que se inicialice una Nave con la masa indicada' do
+
+    nave = Nave.new(200,300)
+
+    #La masa de la nave deben ser 300
+    expect(nave.masa).to eq 300
 
   end
 
