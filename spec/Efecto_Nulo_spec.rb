@@ -19,4 +19,15 @@ describe 'Efecto_Nulo' do
     expect(nave.masa).to eq 100
   end
 
+  it 'Se verifica que un Efecto Nulo no altere el estado de un Misil' do
+    efecto_nulo = Efecto_Nulo.new
+    misil = Misil.new(200,200)
+
+    efecto_nulo.aplicar(misil, nil)
+
+    #Estado actualizado del misil
+    expect(misil.vida).to eq 200
+    expect(misil.masa).to eq 200
+  end
+
 end
