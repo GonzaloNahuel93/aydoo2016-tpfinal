@@ -41,4 +41,13 @@ describe 'Nave' do
 
   end
 
+  it 'Se verifica que se inicialice una Nave con la masa 0 (Cero) cuando se inserta un numero negativo para la masa' do
+
+    nave = Nave.new(100,-100)
+
+    #La masa de la nave deben ser 0
+    expect(nave.masa).to eq 0
+
+  end
+
 end
