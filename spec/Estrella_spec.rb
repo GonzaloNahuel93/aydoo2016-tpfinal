@@ -32,14 +32,14 @@ describe 'Estrella' do
 
   end
 
-#  it 'Se verifica que se inicialice una Estrella con la vida en 0 (Cero) cuando se inserta un numero negativo para la vida' do
+  it 'Se verifica que se inicialice una Estrella con la vida en 0 (Cero) cuando se inserta un numero negativo para la vida' do
 
-#    estrella = Estrella.new(-100,100)
+    estrella = Estrella.new(-100,100)
 
     #La vida de la estrella debe ser 0
-#    expect(estrella.vida).to eq 0
+    expect(estrella.vida).to eq 0
 
-#  end
+  end
 
 #  it 'Se verifica que se inicialice una Estrella con la masa en 0 (Cero) cuando se inserta un numero negativo para la masa' do
 
