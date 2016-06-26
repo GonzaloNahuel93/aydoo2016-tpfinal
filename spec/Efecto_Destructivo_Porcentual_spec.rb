@@ -19,4 +19,14 @@ describe 'Efecto_Destructivo_Porcentual' do
     expect(nave.vida).to eq 50
   end
 
+  it 'Se verifica que un Efecto Destructivo Porcentual altere correctamente la vida de un Misil' do
+    efecto_destructivo_porcentual = Efecto_Destructivo_Porcentual.new(0.2)
+    misil = Misil.new(1000,1000)
+
+    efecto_destructivo_porcentual.aplicar(misil, nil)
+
+    #Vida actualizada del misil
+    expect(misil.vida).to eq 800
+  end
+
 end
