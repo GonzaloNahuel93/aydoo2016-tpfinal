@@ -33,4 +33,16 @@ describe 'Efecto_Masa' do
     expect(misil.masa).to eq 450
   end
 
+  it 'Se verifica que un Efecto Masa altere correctamente la masa de una Bomba en base a una Nave' do
+    efecto_masa = Efecto_Masa.new(0.1)
+    bomba = Bomba.new(1000,1000)
+    nave = Nave.new(1000,1000)
+
+    #La bomba debe incrementar su masa en un valor igual al 10% de la masa de la nave
+    efecto_masa.aplicar(bomba, nave)
+
+    #Vida actualizada de la bomba
+    expect(bomba.masa).to eq 1100
+  end
+
 end
