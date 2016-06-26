@@ -5,6 +5,8 @@
 ----------------------------------------------------------------------
 * Observación 01: existe código repetido en las clases hijas de 'ObjetoEspacial', en particular los atributos 'masa', 'vida' y 'esta_vivo'. Sugiero "subirlos" a la superclase.
 
+Respuesta: ACEPTADO. Buena observación. Ahora cada clase llama al constructor del padre 'Objeto_Espacial' para guardar los datos correspondientes a 'vida' y 'masa'.
+
 ----------------------------------------------------------------------
 
 * Observación 02: considero innecesario que la clase 'Colision' almacene algún atributo. Sugiero que se limite a operar con los objetos espaciales que reciba sin almacenarlos para evitar una ocupación de memoria que es innecesaria.

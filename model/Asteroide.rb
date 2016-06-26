@@ -11,9 +11,7 @@ class Asteroide < Objeto_Espacial
 
   def initialize(vida, masa)
 
-    @vida = vida
-    @masa = masa
-    @esta_vivo = true
+    super(vida, masa)
 
     @colisiones = {
       Nave => Efecto_Masa.new(0.1),

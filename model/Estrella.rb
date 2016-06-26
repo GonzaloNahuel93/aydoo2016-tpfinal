@@ -11,9 +11,7 @@ class Estrella < Objeto_Espacial
 
   def initialize(vida, masa)
 
-    @vida = vida
-    @masa = masa
-    @esta_vivo = true
+    super(vida, masa)
 
     @colisiones = {
       Nave => Efecto_Destructivo_Porcentual.new(1.0),

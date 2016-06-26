@@ -2,6 +2,14 @@ class Objeto_Espacial
 
   attr_accessor :vida, :masa
 
+  def initialize(vida, masa)
+
+    @vida = vida
+    @masa = masa
+    @esta_vivo = true
+
+  end
+
   def colisionar_con(objeto_espacial)
 
     colision = Colision.new(self, objeto_espacial)
@@ -14,7 +22,7 @@ class Objeto_Espacial
   end
 
   def actualizar_estado
-    
+
     if(@vida <= 0)
 
       @vida = 0
