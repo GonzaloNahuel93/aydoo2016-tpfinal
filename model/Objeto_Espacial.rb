@@ -15,7 +15,7 @@ class Objeto_Espacial
     @colisiones[objeto_espacial.class]
   end
 
-  def actualizar_datos
+  def actualizar_estado
     
     if(@vida <= 0)
 

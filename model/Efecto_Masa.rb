@@ -7,7 +7,7 @@ class Efecto_Masa
   def aplicar(primer_objeto_espacial, segundo_objeto_espacial)
 
     primer_objeto_espacial.masa += (segundo_objeto_espacial.masa * @porcentaje)
-    primer_objeto_espacial.actualizar_datos
+    primer_objeto_espacial.actualizar_estado
 
   end
 
