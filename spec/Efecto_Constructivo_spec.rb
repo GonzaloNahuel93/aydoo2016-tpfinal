@@ -57,4 +57,16 @@ describe 'Efecto_Constructivo' do
     expect(asteroide.vida).to eq 50
   end
 
+  it 'Se verifica que un Efecto Constructivo no altere la vida de una Estrella en base a otra Estrella que tiene 0 de vida' do
+    efecto_constructivo = Efecto_Constructivo.new
+    primera_estrella = Estrella.new(500,500)
+    segunda_estrella = Estrella.new(0,100)
+
+    #La primera_estrella no debe incrementar su vida, ya que la segunda_estrella tiene 0 (Cero) vida
+    efecto_constructivo.aplicar(primera_estrella, segunda_estrella)
+
+    #Vida actualizada de la primera_estrella
+    expect(primera_estrella.vida).to eq 500
+  end
+
 end
