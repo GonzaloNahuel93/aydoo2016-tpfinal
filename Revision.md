@@ -9,6 +9,8 @@
 
 * Observación 02: considero innecesario que la clase 'Colision' almacene algún atributo. Sugiero que se limite a operar con los objetos espaciales que reciba sin almacenarlos para evitar una ocupación de memoria que es innecesaria.
 
+Respuesta: RECHAZADO. Para mi es importante que la clase 'Colision' almacene y conozca a los objetos que colisionaron. Además, el modelado de esta situación se asemeja a la realidad ya que cuando dos objetos colisionan, se crea (justamente) una colisión que tiene como involucrados a los dos protagonistas de la misma. El uso de memoria en este caso es mínimo, y a mi parecer, determinar si este uso de memoria es necesario o innecesario sale del foco de este trabajo práctico.
+
 ----------------------------------------------------------------------
 
 * Observación 03: en la clase 'ObjetoEspacial' se define un attribute accessor para los atributos 'masa' y 'vida', y debajo se definen esos atributos individualmente. Se considera mala práctica en Ruby, por ser redundante, representar a los atributos individualmente al mismo tiempo que se define un attribute accessor, por lo que recomiendo removerlos dejando únicamente el attribute accessor de los mismos.
@@ -16,6 +18,8 @@
 ----------------------------------------------------------------------
 
 * Observación 04: el nombre del método 'actualizar_datos' de la clase 'ObjetoEspacial' no indica claramente cuál es su responsabilidad. Sugiero cambiarlo por un nombre más descriptivo para mejorar la claridad del código.
+
+Respuesta: ACEPTADO. Se ha cambiado el nombre de ese método por 'actualizar_estado'. Cuyo estado es conformado por la cantidad de vida, masa, y un booleano que indica si el objeto está o no vivo. 
 
 ----------------------------------------------------------------------
 
