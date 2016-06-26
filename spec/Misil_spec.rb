@@ -23,14 +23,14 @@ describe 'Misil' do
 
   end
 
-#  it 'Se verifica que se inicialice un Misil con la masa indicada' do
+  it 'Se verifica que se inicialice un Misil con la masa indicada' do
 
-#    misil = Misil.new(500,400)
+    misil = Misil.new(500,400)
 
     #La masa del misil debe ser 400
-#    expect(misil.masa).to eq 400
+    expect(misil.masa).to eq 400
 
-#  end
+  end
 
 #  it 'Se verifica que se inicialice un Misil con la vida 0 (Cero) cuando se inserta un numero negativo para la vida' do
 
