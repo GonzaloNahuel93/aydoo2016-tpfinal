@@ -45,4 +45,16 @@ describe 'Efecto_Constructivo' do
     expect(bomba.vida).to eq 30
   end
 
+  it 'Se verifica que un Efecto Constructivo altere correctamente la vida de un Asteroide en base a un Misil' do
+    efecto_constructivo = Efecto_Constructivo.new
+    asteroide = Asteroide.new(44,100)
+    misil = Misil.new(6,100)
+
+    #El asteroide debe incrementar su vida en una cantidad de unidades igual a la vida del misil
+    efecto_constructivo.aplicar(asteroide, misil)
+
+    #Vida actualizada del asteroide
+    expect(asteroide.vida).to eq 50
+  end
+
 end
