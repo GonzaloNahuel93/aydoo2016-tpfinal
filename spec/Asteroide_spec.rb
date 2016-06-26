@@ -14,14 +14,14 @@ describe 'Asteroide' do
 
   end
 
-#  it 'Se verifica que se inicialice un Asteroide con la vida indicada' do
+  it 'Se verifica que se inicialice un Asteroide con la vida indicada' do
 
-#    asteroide = Asteroide.new(10,50)
+    asteroide = Asteroide.new(150,100)
 
-    #La vida del asteroide debe ser 10
-#    expect(asteroide.vida).to eq 10
+    #La vida del asteroide debe ser 150
+    expect(asteroide.vida).to eq 150
 
-#  end
+  end
 
 #  it 'Se verifica que se inicialice un Asteroide con la masa indicada' do
 
