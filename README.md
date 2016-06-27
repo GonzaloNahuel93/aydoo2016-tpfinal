@@ -48,8 +48,8 @@
 
 ----------------------------------------------------------------------
 
-##Trabajo Práctico Finalizado
-##Cantidad de Pruebas/Tests: 95.
-##Cobertura: 100%.
+##- Trabajo Práctico Finalizado
+##- Cantidad de Pruebas/Tests: 95.
+##- Cobertura: 100%.
 
 ----------------------------------------------------------------------
