@@ -10,7 +10,6 @@ require_relative '../model/Asteroide'
 class Estrella < ObjetoEspacial
 
   def initialize(*parametros)
-
     super(*parametros)
 
     @colisiones = {
@@ -20,7 +19,6 @@ class Estrella < ObjetoEspacial
       Asteroide => EfectoDestructivoPorcentual.new(1.0),
       Estrella => EfectoDestructivoPorcentual.new(1.0)
     }
-
   end
 
 end

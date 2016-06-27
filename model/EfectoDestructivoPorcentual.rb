@@ -10,12 +10,10 @@ class EfectoDestructivoPorcentual < EfectoDestructivo
   end
 
   def aplicar(*objeto_espacial)
-
     objeto_espacial = objeto_espacial[0]
 
     objeto_espacial.vida -= (objeto_espacial.vida * @dato_requerido)
     objeto_espacial.actualizar_estado
-
   end
 
 end

@@ -22,7 +22,7 @@
 
 - La solución definitiva consiste en lo siguiente:
 
-* Cada clase tiene un Hash Map donde la clave es la clase con la que un objeto pueda colisionar alguna vez, y el valor es el efecto que sufrirá ese objeto si choca con otro de esa determinada clase.
+* Cada clase tiene un Hash Map donde la clave es la clase con la que un objeto puede colisionar alguna vez, y el valor es el efecto que sufrirá ese objeto si choca con otro de la clase determinada.
 
 * Para cada clase de objeto con la que pueda colisionar un tipo determinado de objeto, existe un efecto determinado que sufrirá.
 
@@ -30,13 +30,15 @@
 
 * La colisión se ocupa de pedirle a cada objeto el efecto que sufrió por haber colisionado con el otro objeto. Y luego de esto, se aplican sus respectivos efectos a ambos.
 
-* En la solución modelada, se pueden seguir agregando al Hash Map distintos tipos de clases y sus respectivos efectos sufridos por un determinado tipo de objeto. Esto hace que no se viole el principio del Open/Close.
+* En la solución modelada, se pueden seguir agregando al Hash Map distintos tipos de clases y los respectivos efectos que sufriría un tipo objeto por colisionar con otro tipo diferente de objeto. Esto hace que no se viole el principio del Open/Close.
 
 ----------------------------------------------------------------------
 
 ##Observaciones/Críticas de la solución
 
 * Las clases del dominio: Nave, Misil, Bomba, Asteroide, y Estrella heredan de la clase 'ObjetoEspacial'. Me incomoda saber que esa clase se puede instanciar, ya que ante cualquier intento de hacer colisionar una instancia de 'ObjetoEspacial' no funcionaría. Pero gracias a esa clase pude evitar repetir código en las clases del dominio, ya que la lógica de los métodos 'colisionar_con' y 'get_efecto_sufrido' es igual para todas ellas. Además en 'ObjetoEspacial' se inicializan los atributos vida, masa, y esta_vivo lo cual indica con un booleano si un objeto tiene la vida o la masa en 0 (Cero).
+
+* La clase 'Efecto' también se puede instanciar, y me molesta eso también al igual que 'ObjetoEspacial'. Si se instancia la clase 'Efecto' y luego se invoca al método 'aplicar' no pasará nada, funciona como un Efecto Nulo. Pero me pareció bueno crearla para poder generalizar todos los diferentes efectos que hay y mejorar la claridad del código.
 
 * La clase 'EfectoNulo' no tiene comportamiento. Cuando se aplica este efecto no cambia el estado de ninguno de los dos objetos que colisionaron (Como debería ser). Tiene un método 'aplicar' que está vacío. Me incomoda tener una clase que no hace absolutamente nada, pero es para hacer más claro el código cuando se define el Hash Map para un tipo de objeto, indicando qué efecto sufriría si choca con otro tipo de objeto particular.
 
