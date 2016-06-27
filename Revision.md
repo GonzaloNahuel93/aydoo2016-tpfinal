@@ -41,6 +41,15 @@ Respuesta: ACEPTADO. Coincido totalmente con lo que decís y soy consciente de q
 
 * Observación 07: las clases de efecto ('EfectoMasa', 'EfectoDestructivo', etc.) tienen código repetido. Sugiero que hereden de una superclase 'Efectos'.
 
+Respuesta: RECHAZADO. Y coloco 'RECHAZADO' porque no coincido en absoluto que se repite código en esas clases. Los efectos reciben parámetros de diferentes tipos y la lógica para aplicar cada uno de esos efectos difieren completamente entre sí.
+
+- El Efecto Nulo no altera el estado de un objeto (No modifica su vida ni su masa).
+- El Efecto Destructivo disminuye la vida de un objeto en una determinada cantidad de unidades.
+- El Efecto Constructivo aumenta la vida de un objeto en una determinada cantidad de unidades.
+- El Efecto Masa aumenta o disminuye la masa de un objeto en una cantidad proporcional (Porcentaje) a la masa del objeto con el que colisionó.
+
+Por eso repito: La lógica definida en cada clase es diferente, y NO se repite código entre ellas. De todas formas, tomo que cada efecto herede de una superclase 'Efecto'.
+
 ----------------------------------------------------------------------
 
 * Observación 08: considero innecesaria la creación de objetos que no tienen comportamiento o estado alguno, como la clase 'EfectoNulo', ya que aunque pertenezca al dominio no hace ni hará nada jamás (de otra forma no se debería denominar 'EfectoNulo'). Sugiero eliminarla y reemplazarla por algún estado ya existente configurado para que no provoque cambio alguno.
