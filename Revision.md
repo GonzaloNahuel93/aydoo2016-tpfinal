@@ -5,7 +5,7 @@
 ----------------------------------------------------------------------
 * Observación 01: existe código repetido en las clases hijas de 'ObjetoEspacial', en particular los atributos 'masa', 'vida' y 'esta_vivo'. Sugiero "subirlos" a la superclase.
 
-Respuesta: ACEPTADO. Buena observación. Ahora cada clase llama al constructor del padre 'Objeto_Espacial' para guardar los datos correspondientes a 'vida' y 'masa'.
+Respuesta: ACEPTADO. Buena observación. Ahora cada clase llama al constructor del padre 'Objeto_Espacial' para guardar los datos correspondientes a 'vida', 'masa', y 'esta_vivo'.
 
 ----------------------------------------------------------------------
 
@@ -35,6 +35,8 @@ Respuesta: ACEPTADO. Si, faltaban las pruebas específicas para cada clase. El T
 
 * Observación 06: es mala práctica que cada prueba unitaria tenga más de una aserción. Sugiero partir las pruebas que no cumplen esto en pruebas independientes que tengan una única aserción.
 
+Respuesta: ACEPTADO. Coincido totalmente con lo que decís y soy consciente de que es una mala práctica. Pero sinceramente me siento obligado a comprobar en las pruebas, que luego de una colisión, la vida y la masa de ambos objetos involucrados es correcta. Igualmente, documentaré este detalle en el README.md. 
+
 ----------------------------------------------------------------------
 
 * Observación 07: las clases de efecto ('EfectoMasa', 'EfectoDestructivo', etc.) tienen código repetido. Sugiero que hereden de una superclase 'Efectos'.
@@ -43,7 +45,6 @@ Respuesta: ACEPTADO. Si, faltaban las pruebas específicas para cada clase. El T
 
 * Observación 08: considero innecesaria la creación de objetos que no tienen comportamiento o estado alguno, como la clase 'EfectoNulo', ya que aunque pertenezca al dominio no hace ni hará nada jamás (de otra forma no se debería denominar 'EfectoNulo'). Sugiero eliminarla y reemplazarla por algún estado ya existente configurado para que no provoque cambio alguno.
 
-Respuesta: RECHAZADO. Si bien es verdad que el Efecto Nulo no hace nada, y hasta admito que me siento incómodo teniendo una clase que no cambia el estado de ninguna clase, hace que mi código sea legible en cuanto a que efecto debe sufrir un objeto espacial cuando colisiona con otro. Además, como bien se dijo, el Efecto Nulo pertenece al dominio del problema, lo cual me siento obligado de cierta forma a que ese efecto esté entre las clases a modelar.
+Respuesta: RECHAZADO. Si bien es verdad que el Efecto Nulo no hace nada, y hasta admito que me siento incómodo teniendo una clase que no cambia el estado de ningun objeto, hace que mi código sea legible en cuanto a qué efecto debe sufrir un objeto espacial cuando colisiona con otro diferente o igual a su tipo. Además, como bien se dijo, el Efecto Nulo pertenece al dominio del problema, con lo cual me siento obligado de cierta forma a que ese efecto esté entre las clases a modelar. Igualmente, documentaré este detalle en el README.md.
 
 ----------------------------------------------------------------------
-
