@@ -1,6 +1,12 @@
+require_relative '../model/ObjetoMuertoException'
+
 class Colision
 
   def initialize(objeto_colisionador, objeto_colisionado)
+
+    if (!objeto_colisionador.esta_vivo || !objeto_colisionado.esta_vivo)
+      raise ObjetoMuertoException.new
+    end
 
     @objeto_colisionador = objeto_colisionador
     @objeto_colisionado = objeto_colisionado
