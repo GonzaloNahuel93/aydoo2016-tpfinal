@@ -1,6 +1,8 @@
-class EfectoNulo
+require_relative '../model/Efecto'
 
-  def aplicar(primer_objeto_espacial, segundo_objeto_espacial)
+class EfectoNulo < Efecto
+
+  def aplicar(*objeto_espacial)
     #Este Efecto no hace nada. Deja al Objeto Espacial tal y como esta.
   end
 

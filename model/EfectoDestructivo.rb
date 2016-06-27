@@ -1,13 +1,17 @@
-class EfectoDestructivo
+require_relative '../model/Efecto'
+
+class EfectoDestructivo < Efecto
 
   def initialize(vida_a_bajar)
-    @vida_a_bajar = vida_a_bajar 	
+    super(vida_a_bajar)	
   end
 
-  def aplicar(primer_objeto_espacial, segundo_objeto_espacial)
+  def aplicar(*objeto_espacial)
 
-    primer_objeto_espacial.vida -= @vida_a_bajar
-    primer_objeto_espacial.actualizar_estado
+    objeto_espacial = objeto_espacial[0]
+
+    objeto_espacial.vida -= @dato_requerido
+    objeto_espacial.actualizar_estado
 
   end
 
