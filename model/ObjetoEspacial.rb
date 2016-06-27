@@ -5,6 +5,9 @@ class ObjetoEspacial
 
   def initialize(*parametros)
 
+    #Este bloque if else no me gusta mucho, pero sinceramente no encontre otra manera de solucionar la situacion:
+    #Se intenta distinguir si vienen dos parametros (Lo cual indica que se inserta una vida y masa determinadas).
+    #O si no viene ningun parametro hay que inicializar el Objeto Espacial con su vida y masa por default (100 para c/u).
     if(parametros.length == 2)
 
       @vida = parametros[0]
@@ -19,6 +22,7 @@ class ObjetoEspacial
       @esta_vivo = true
 
     end
+    #
 
   end
 
