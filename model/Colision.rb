@@ -4,6 +4,7 @@ class Colision
 
   def initialize(objeto_colisionador, objeto_colisionado)
 
+    #Se lanzara una Excepcion si uno o los dos objetos espaciales esta/n muertos.
     if (!objeto_colisionador.esta_vivo || !objeto_colisionado.esta_vivo)
       raise ObjetoMuertoException.new
     end
