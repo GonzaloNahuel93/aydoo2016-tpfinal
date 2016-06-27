@@ -12,12 +12,12 @@ describe 'Colision' do
     colision = Colision.new(primer_objeto_espacial, segundo_objeto_espacial)
   end
 
-#  it 'Se verifica que no se inicialice una Colision con el objeto colisionador muerto' do
-#    primer_objeto_espacial = ObjetoEspacial.new(0,0)
-#    segundo_objeto_espacial = ObjetoEspacial.new
+  it 'Se verifica que no se inicialice una Colision con el objeto colisionador muerto' do
+    primer_objeto_espacial = ObjetoEspacial.new(0,0)
+    segundo_objeto_espacial = ObjetoEspacial.new
 
-#    expect {colision = Colision.new(primer_objeto_espacial, segundo_objeto_espacial)}.to raise_exception ObjetoMuertoException
-#  end
+    expect {colision = Colision.new(primer_objeto_espacial, segundo_objeto_espacial)}.to raise_exception ObjetoMuertoException
+  end
 
 #  it 'Se verifica que no se inicialice una Colision con el objeto colisionado muerto' do
 #    primer_objeto_espacial = ObjetoEspacial.new
