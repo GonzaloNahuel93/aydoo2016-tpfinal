@@ -11,7 +11,7 @@ Respuesta: ACEPTADO. Buena observación. Ahora cada clase llama al constructor d
 
 * Observación 02: considero innecesario que la clase 'Colision' almacene algún atributo. Sugiero que se limite a operar con los objetos espaciales que reciba sin almacenarlos para evitar una ocupación de memoria que es innecesaria.
 
-Respuesta: RECHAZADO. Para mi es importante que la clase 'Colision' almacene y conozca a los objetos que colisionaron. Además, el modelado de esta situación se asemeja a la realidad ya que cuando dos objetos colisionan, se crea (justamente) una colisión que tiene como involucrados a los dos protagonistas de la misma. El uso de memoria en este caso es mínimo, y a mi parecer, determinar si este uso de memoria es necesario o innecesario sale del foco de este trabajo práctico.
+Respuesta: RECHAZADO. Para mi es importante que la clase 'Colision' almacene y conozca a los objetos que colisionaron. Además, el modelado de esta situación se asemeja a la realidad ya que cuando dos objetos colisionan, se crea (Justamente) una colisión que tiene como involucrados a los dos protagonistas de la misma. El uso de memoria en este caso es mínimo, y a mi parecer, determinar si este uso de memoria es necesario o innecesario sale del foco de este trabajo práctico.
 
 ----------------------------------------------------------------------
 
@@ -28,6 +28,8 @@ Respuesta: ACEPTADO. Se ha cambiado el nombre de ese método por 'actualizar_est
 ----------------------------------------------------------------------
 
 * Observación 05: faltan clases de prueba para la mayoría de las clases. Aunque la cobertura pudiera ser alta, esto no garantiza la calidad de las pruebas. Además, más allá de la existencia de pruebas de integración, se necesitan pruebas específicas para cada clase.
+
+Respuesta: ACEPTADO. Si, faltaban las pruebas específicas para cada clase. El TDD se había empezado a hacer con las pruebas de integración de colisiones. Pero ya están hechas las pruebas unitarias para cada clase del dominio del problema.
 
 ----------------------------------------------------------------------
 
