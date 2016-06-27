@@ -13,7 +13,7 @@ describe 'EfectoDestructivoPorcentual' do
     efecto_destructivo_porcentual = EfectoDestructivoPorcentual.new(0.5)
     nave = Nave.new(100,100)
 
-    efecto_destructivo_porcentual.aplicar(nave, nil)
+    efecto_destructivo_porcentual.aplicar(nave)
 
     #Vida actualizada de la nave
     expect(nave.vida).to eq 50
@@ -23,7 +23,7 @@ describe 'EfectoDestructivoPorcentual' do
     efecto_destructivo_porcentual = EfectoDestructivoPorcentual.new(0.2)
     misil = Misil.new(1000,1000)
 
-    efecto_destructivo_porcentual.aplicar(misil, nil)
+    efecto_destructivo_porcentual.aplicar(misil)
 
     #Vida actualizada del misil
     expect(misil.vida).to eq 800
@@ -33,7 +33,7 @@ describe 'EfectoDestructivoPorcentual' do
     efecto_destructivo_porcentual = EfectoDestructivoPorcentual.new(0.1)
     bomba = Bomba.new(500,500)
 
-    efecto_destructivo_porcentual.aplicar(bomba, nil)
+    efecto_destructivo_porcentual.aplicar(bomba)
 
     #Vida actualizada de la bomba
     expect(bomba.vida).to eq 450
@@ -43,7 +43,7 @@ describe 'EfectoDestructivoPorcentual' do
     efecto_destructivo_porcentual = EfectoDestructivoPorcentual.new(0.25)
     asteroide = Asteroide.new(1500,1500)
 
-    efecto_destructivo_porcentual.aplicar(asteroide, nil)
+    efecto_destructivo_porcentual.aplicar(asteroide)
 
     #Vida actualizada del asteroide
     expect(asteroide.vida).to eq 1125
@@ -53,7 +53,7 @@ describe 'EfectoDestructivoPorcentual' do
     efecto_destructivo_porcentual = EfectoDestructivoPorcentual.new(0.9)
     estrella = Estrella.new(10,10)
 
-    efecto_destructivo_porcentual.aplicar(estrella, nil)
+    efecto_destructivo_porcentual.aplicar(estrella)
 
     #Vida actualizada de la estrella
     expect(estrella.vida).to eq 1

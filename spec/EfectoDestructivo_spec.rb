@@ -13,7 +13,7 @@ describe 'EfectoDestructivo' do
     efecto_destructivo = EfectoDestructivo.new(200)
     nave = Nave.new(100,100)
 
-    efecto_destructivo.aplicar(nave, nil)
+    efecto_destructivo.aplicar(nave)
 
     #Vida actualizada de la nave
     expect(nave.vida).to eq 0
@@ -23,7 +23,7 @@ describe 'EfectoDestructivo' do
     efecto_destructivo = EfectoDestructivo.new(10)
     misil = Misil.new(100,100)
 
-    efecto_destructivo.aplicar(misil, nil)
+    efecto_destructivo.aplicar(misil)
 
     #Vida actualizada del misil
     expect(misil.vida).to eq 90
@@ -33,7 +33,7 @@ describe 'EfectoDestructivo' do
     efecto_destructivo = EfectoDestructivo.new(550)
     bomba = Bomba.new(1000,1000)
 
-    efecto_destructivo.aplicar(bomba, nil)
+    efecto_destructivo.aplicar(bomba)
 
     #Vida actualizada de la bomba
     expect(bomba.vida).to eq 450
@@ -43,7 +43,7 @@ describe 'EfectoDestructivo' do
     efecto_destructivo = EfectoDestructivo.new(340)
     asteroide = Asteroide.new(400,400)
 
-    efecto_destructivo.aplicar(asteroide, nil)
+    efecto_destructivo.aplicar(asteroide)
 
     #Vida actualizada del asteroide
     expect(asteroide.vida).to eq 60
@@ -53,7 +53,7 @@ describe 'EfectoDestructivo' do
     efecto_destructivo = EfectoDestructivo.new(180)
     estrella = Estrella.new(185,200)
 
-    efecto_destructivo.aplicar(estrella, nil)
+    efecto_destructivo.aplicar(estrella)
 
     #Vida actualizada de la estrella
     expect(estrella.vida).to eq 5

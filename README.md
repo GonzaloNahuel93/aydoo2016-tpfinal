@@ -45,3 +45,11 @@
 * Soy consciente de que no se manejan muchos errores. Especialmente en las clases de los efectos. Como por ejemplo que en el Efecto Destructivo no se le coloque un número negativo para que disminuya esa cantidad de vida a un objeto. El único error que se maneja (Con la excepción creada) es cuando se intenta hacer una colisión donde alguno o los dos objetos está/n muertos.
 
 * Hay Tests que tienen como mucho cuatro expect. Soy consciente de que es mala práctica colocar más de un expect por Test, pero en ocasiones me veía obligado a colocar dos para comprobar la vida y la masa de un objeto. Especialmente en los ejemplos dados en el enunciado, interpreto que debían ser comprobados ambos atributos (Vida y masa) de los dos objetos que colisionan. Y en la prueba de integración de colisiones también me veía obligado a comprobar y demostrar que la vida y masa tanto del objeto colisionador como el colisionado, son correctas luego de ocurrida la colisión.
+
+----------------------------------------------------------------------
+
+##Trabajo Práctico Finalizado
+##Cantidad de Pruebas/Tests: 95.
+##Cobertura: 100%.
+
+----------------------------------------------------------------------

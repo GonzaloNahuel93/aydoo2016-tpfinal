@@ -13,7 +13,7 @@ describe 'EfectoNulo' do
     efecto_nulo = EfectoNulo.new
     nave = Nave.new(100,100)
 
-    efecto_nulo.aplicar(nave, nil)
+    efecto_nulo.aplicar(nave)
 
     #Estado actualizado de la nave
     expect(nave.vida).to eq 100
@@ -24,7 +24,7 @@ describe 'EfectoNulo' do
     efecto_nulo = EfectoNulo.new
     misil = Misil.new(200,200)
 
-    efecto_nulo.aplicar(misil, nil)
+    efecto_nulo.aplicar(misil)
 
     #Estado actualizado del misil
     expect(misil.vida).to eq 200
@@ -35,7 +35,7 @@ describe 'EfectoNulo' do
     efecto_nulo = EfectoNulo.new
     bomba = Bomba.new(300,300)
 
-    efecto_nulo.aplicar(bomba, nil)
+    efecto_nulo.aplicar(bomba)
 
     #Estado actualizado de la bomba
     expect(bomba.vida).to eq 300
@@ -46,7 +46,7 @@ describe 'EfectoNulo' do
     efecto_nulo = EfectoNulo.new
     asteroide = Asteroide.new(400,400)
 
-    efecto_nulo.aplicar(asteroide, nil)
+    efecto_nulo.aplicar(asteroide)
 
     #Estado actualizado del asteroide
     expect(asteroide.vida).to eq 400
@@ -57,7 +57,7 @@ describe 'EfectoNulo' do
     efecto_nulo = EfectoNulo.new
     estrella = Estrella.new(500,500)
 
-    efecto_nulo.aplicar(estrella, nil)
+    efecto_nulo.aplicar(estrella)
 
     #Estado actualizado de la estrella
     expect(estrella.vida).to eq 500
