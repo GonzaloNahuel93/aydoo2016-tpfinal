@@ -44,4 +44,9 @@ describe 'ObjetoEspacial' do
     expect(objeto_espacial.esta_vivo).to eq false
   end
 
+  it 'Se verifica que un Objeto Espacial no este vivo cuando se inicializa su vida con 0 (Cero) y su masa con un numero negativo' do
+    objeto_espacial = ObjetoEspacial.new(0,-10)
+    expect(objeto_espacial.esta_vivo).to eq false
+  end
+
 end
