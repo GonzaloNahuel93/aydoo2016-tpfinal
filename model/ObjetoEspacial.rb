@@ -1,6 +1,7 @@
 class ObjetoEspacial
 
   attr_accessor :vida, :masa
+  attr_reader :esta_vivo, :colisiones
 
   def initialize(*parametros)
 
