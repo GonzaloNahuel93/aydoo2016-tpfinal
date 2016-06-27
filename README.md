@@ -36,7 +36,7 @@
 
 ##Observaciones/Críticas de la solución
 
-* Las clases del dominio: Nave, Misil, Bomba, Asteroide, y Estrella heredan de la clase 'ObjetoEspacial'. Me incomoda saber que esa clase se puede instanciar, ya que ante cualquier intento de hacer colisionar una instancia de 'ObjetoEspacial' no funcionaría. Pero gracias a esa clase pude evitar repetir código en las clases del dominio, ya que la lógica de los métodos 'colisionar_con' y 'get_efecto_sufrido' es igual para todas ellas. Además en 'ObjetoEspacial' se inicializan los atributos vida, masa, y esta_vivo lo cual indica con un booleano si un objeto tiene la vida o la masa en 0 (Cero).
+* Las clases del dominio: Nave, Misil, Bomba, Asteroide, y Estrella heredan de la clase 'ObjetoEspacial'. Me incomoda saber que esa clase se puede instanciar, ya que ante cualquier intento de hacer colisionar una instancia de 'ObjetoEspacial' no funcionaría. Pero gracias a esa clase pude evitar repetir código en las clases del dominio, ya que la lógica de los métodos 'colisionar_con', 'get_efecto_sufrido', y 'actualizar_estado' es igual para todos ellos. Además en 'ObjetoEspacial' se inicializan los atributos vida, masa, y esta_vivo lo cual indica con un booleano si un objeto tiene la vida o la masa en 0 (Cero).
 
 * La clase 'Efecto' también se puede instanciar, y me molesta eso también al igual que 'ObjetoEspacial'. Si se instancia la clase 'Efecto' y luego se invoca al método 'aplicar' no pasará nada, funciona como un Efecto Nulo. Pero me pareció bueno crearla para poder generalizar todos los diferentes efectos que hay y mejorar la claridad del código.
 
