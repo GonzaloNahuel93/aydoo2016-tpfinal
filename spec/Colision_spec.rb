@@ -12,6 +12,13 @@ describe 'Colision' do
     colision = Colision.new(primer_objeto_espacial, segundo_objeto_espacial)
   end
 
+  it 'Se verifica que se inicialice una Colision con objetos espaciales vivos determinando su vida y masa previamente' do
+    primer_objeto_espacial = ObjetoEspacial.new(500,500)
+    segundo_objeto_espacial = ObjetoEspacial.new(250,250)
+
+    colision = Colision.new(primer_objeto_espacial, segundo_objeto_espacial)
+  end
+
   it 'Se verifica que no se inicialice una Colision con el objeto colisionador muerto' do
     primer_objeto_espacial = ObjetoEspacial.new(0,0)
     segundo_objeto_espacial = ObjetoEspacial.new
