@@ -1,5 +1,5 @@
 # Revisión del Trabajo Práctico final de AyDOO 2016
-## Estado del repositorio a las 19:20 hs. del 25/06/2016
+## Estado del repositorio a las 14:00 hs. del 27/06/2016
 ## Revisor: Gonzalo Alejandro Cozzi.
 
 ----------------------------------------------------------------------
@@ -55,5 +55,11 @@ Por eso repito: La lógica definida en cada clase es diferente, y NO se repite c
 * Observación 08: considero innecesaria la creación de objetos que no tienen comportamiento o estado alguno, como la clase 'EfectoNulo', ya que aunque pertenezca al dominio no hace ni hará nada jamás (de otra forma no se debería denominar 'EfectoNulo'). Sugiero eliminarla y reemplazarla por algún estado ya existente configurado para que no provoque cambio alguno.
 
 Respuesta: RECHAZADO. Si bien es verdad que el Efecto Nulo no hace nada, y hasta admito que me siento incómodo teniendo una clase que no cambia el estado de ningun objeto, hace que mi código sea legible en cuanto a qué efecto debe sufrir un objeto espacial cuando colisiona con otro diferente o igual a su tipo. Además, como bien se dijo, el Efecto Nulo pertenece al dominio del problema, con lo cual me siento obligado de cierta forma a que ese efecto esté entre las clases a modelar. Igualmente, documentaré este detalle en el README.md.
+
+----------------------------------------------------------------------
+
+* [Pedido de Observación] Observación 09: las 95 pruebas corren todas ok.
+
+Respuesta: -
 
 ----------------------------------------------------------------------
